@@ -1,0 +1,11 @@
+include(CMakeFindDependencyMacro)
+@CryptoEncode_FIND_DEPENDENCY_CALLS@
+include("${CMAKE_CURRENT_LIST_DIR}/@exported_targets_filename@")
+message(STATUS "CryptoEncode_DIR = ${CryptoEncode_DIR}")
+message(STATUS "CMAKE_INSTALL_PREFIX = ${CMAKE_INSTALL_PREFIX}")
+
+@PACKAGE_INIT@
+set_and_check(CryptoEncode_INCLUDE_DIR  "${CMAKE_INSTALL_PREFIX}/include/safeheron")
+set_and_check(CryptoEncode_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include/safeheron")
+set_and_check(CryptoEncode_LIBRARY_DIR "${CMAKE_INSTALL_PREFIX}/lib")
+set_and_check(CryptoEncode_LIBRARY "${CMAKE_INSTALL_PREFIX}/lib/libCryptoEncode.so")
