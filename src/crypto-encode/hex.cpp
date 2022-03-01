@@ -25,10 +25,14 @@ std::string DecodeFromHex(const std::string &hex) {
 }
 
 std::string EncodeToHex(const std::string &data) {
+    return EncodeToHex(reinterpret_cast<const unsigned char *>(data.c_str()), data.length());
+}
+
+std::string EncodeToHex(const unsigned char * buf, size_t buf_len){
     std::string hex;
-    unsigned int encode_out_len = data.length() * 2 + 1;
+    unsigned int encode_out_len = buf_len * 2 + 1;
     char *encode_out = static_cast<char *>(malloc(encode_out_len));
-    bin2hex((const uint8_t *)data.c_str(), data.length(), encode_out, encode_out_len);
+    bin2hex(buf, buf_len, encode_out, encode_out_len);
     hex.assign((char *)encode_out, encode_out_len - 1);
     free(encode_out);
     return hex;

@@ -12,6 +12,7 @@ namespace encode {
 namespace base64 {
 
 std::string EncodeToBase64(const std::string &data, bool url = false);
+std::string EncodeToBase64(unsigned char const* buf, size_t buf_len, bool url = false);
 
 std::string DecodeFromBase64(const std::string &base64, bool remove_linebreaks = false);
 

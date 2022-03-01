@@ -11,9 +11,10 @@ namespace safeheron {
 namespace encode {
 namespace hex {
 
-std::string DecodeFromHex(const std::string &hex);
-
 std::string EncodeToHex(const std::string &data);
+std::string EncodeToHex(const unsigned char * buf, size_t buf_len);
+
+std::string DecodeFromHex(const std::string &hex);
 
 };
 };
