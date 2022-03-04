@@ -13,8 +13,9 @@ namespace hex {
 std::string DecodeFromHex(const std::string &hex) {
     std::string data;
     int hex_len = hex.length();
+    if(hex_len == 0) return data;
     if(hex_len % 2 != 0){
-        throw std::runtime_error("Input is not valid hex-encoded data.");
+        throw std::runtime_error("Input is not valid hex-encoded data(length is even).");
     }
     unsigned int decode_out_len = hex_len / 2;
     unsigned char *decode_out = static_cast<unsigned char *>(malloc(decode_out_len));
