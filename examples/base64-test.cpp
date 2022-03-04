@@ -2,7 +2,6 @@
 // Created by 何剑虹 on 2020/10/22.
 //
 #include <cstring>
-#include <google/protobuf/stubs/common.h>
 #include "gtest/gtest.h"
 #include "../src/crypto-encode/base64.h"
 #include "../src/crypto-encode/hex.h"
@@ -70,6 +69,5 @@ TEST(Base64, Example_1)
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     int ret = RUN_ALL_TESTS();
-    google::protobuf::ShutdownProtobufLibrary();
     return ret;
 }
