@@ -18,4 +18,12 @@ target_link_libraries( base64-test
         pthread )
 add_test(NAME test-base64 COMMAND base64-test)
 
+add_executable(hex-test hex-test.cpp)
+target_link_libraries( hex-test
+        CryptoEncode
+        ${GTEST_BOTH_LIBRARIES}
+        pthread )
+add_test(NAME test-hex COMMAND hex-test)
+
+
 
