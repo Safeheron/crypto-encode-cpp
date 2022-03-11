@@ -6,7 +6,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/@exported_targets_filename@")
 set_and_check(CryptoEncode_INCLUDE_DIR  "${CMAKE_INSTALL_PREFIX}/include/safeheron")
 set_and_check(CryptoEncode_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include/safeheron")
 set_and_check(CryptoEncode_LIBRARY_DIR "${CMAKE_INSTALL_PREFIX}/lib")
-
+udo
 MESSAGE(STATUS "###################################")
 MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")
 
