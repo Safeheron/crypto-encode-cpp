@@ -13,9 +13,9 @@ extern "C" {
 #endif
 
 // tallymarker_hextobin
-int hex2bin(const char *str, uint8_t *bytes, size_t blen);
+int tallymarker_hex2bin(const char *str, uint8_t *bytes, size_t blen);
 
-int bin2hex(const uint8_t *bytes, size_t blen, char *str, size_t slen);
+int tallymarker_bin2hex(const uint8_t *bytes, size_t blen, char *str, size_t slen);
 
 #ifdef __cplusplus
 } /* extern "C" */

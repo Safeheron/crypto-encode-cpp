@@ -5,7 +5,7 @@
 #include "gtest/gtest.h"
 #include "../src/crypto-encode/base64.h"
 #include "../src/crypto-encode/hex.h"
-#include "../src/crypto-encode/hex_conv.h"
+#include "../src/crypto-encode/hex_imp.h"
 
 std::vector<std::string> valid_hex_vec = {
         "01",

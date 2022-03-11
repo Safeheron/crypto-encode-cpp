@@ -2,11 +2,11 @@
 // Created by 何剑虹 on 2021/6/24.
 //
 
-#include "hex_conv.h"
+#include "hex_imp.h"
 #include <string.h>
 
 // tallymarker_hextobin
-int hex2bin(const char *str, uint8_t *bytes, size_t blen) {
+int tallymarker_hex2bin(const char *str, uint8_t *bytes, size_t blen) {
     size_t pos;
     uint8_t idx0;
     uint8_t idx1;
@@ -58,7 +58,7 @@ int hex2bin(const char *str, uint8_t *bytes, size_t blen) {
     return 1;
 }
 
-int bin2hex(const uint8_t *bytes, size_t blen, char *str, size_t slen) {
+int tallymarker_bin2hex(const uint8_t *bytes, size_t blen, char *str, size_t slen) {
     char ch[17] = "0123456789abcdef";
     for (size_t i = 0; (i < blen) && (i * 2 + 1 < slen); ++i) {
         int low = bytes[i] & 0x0F;
