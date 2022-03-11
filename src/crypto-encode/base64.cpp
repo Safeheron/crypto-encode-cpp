@@ -10,15 +10,15 @@ namespace encode {
 namespace base64 {
 
 std::string EncodeToBase64(const std::string &data, bool url) {
-    return base64_encode(data, url);
+    return _internal::base64_encode(data, url);
 }
 
 std::string EncodeToBase64(const unsigned char * buf, size_t buf_len, bool url){
-    return base64_encode(buf, buf_len, url);
+    return _internal::base64_encode(buf, buf_len, url);
 }
 
 std::string DecodeFromBase64(const std::string &base64, bool remove_linebreaks) {
-    return base64_decode(base64, remove_linebreaks);
+    return _internal::base64_decode(base64, remove_linebreaks);
 }
 
 };
