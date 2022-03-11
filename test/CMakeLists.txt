@@ -31,4 +31,9 @@ target_link_libraries( hex-test
 add_test(NAME test-hex COMMAND hex-test)
 
 
-
+add_executable(base58-test base58-test.cpp)
+target_link_libraries( base58-test
+        CryptoEncode
+        ${GTEST_BOTH_LIBRARIES}
+        pthread )
+add_test(NAME test-base58 COMMAND base58-test)
