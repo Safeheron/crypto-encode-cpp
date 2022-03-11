@@ -16,13 +16,13 @@ if(GTest_FOUND )
     MESSAGE(STATUS "============> Found GTest!")
 endif(GTest_FOUND )
 
-add_executable(base64-test base64-test.cpp)
-target_include_directories(base64-test PUBLIC
+add_executable(base58-test base58-test.cpp)
+target_include_directories(base58-test PUBLIC
         ${CryptoEncode_INCLUDE_DIRS}
         ${GTEST_INCLUDE_DIRS}
         )
 
-target_link_libraries( base64-test PUBLIC
+target_link_libraries( base58-test PUBLIC
         CryptoEncode
         ${GTEST_BOTH_LIBRARIES}
         pthread )

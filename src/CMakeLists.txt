@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -Wall -Wextra -Wno-unused-parameter 
 
 find_package(CryptoHash REQUIRED)
 if(CryptoHash_FOUND )
-    MESSAGE(STATUS "Found CryptoHash!")
+    MESSAGE(STATUS "============> Found CryptoHash!")
 endif(CryptoHash_FOUND )
 
 add_library(${PROJECT_NAME} SHARED

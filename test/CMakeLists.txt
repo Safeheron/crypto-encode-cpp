@@ -11,7 +11,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 
 find_package(CryptoHash REQUIRED)
 if(CryptoHash_FOUND )
-    MESSAGE(STATUS "Found CryptoHash!")
+    MESSAGE(STATUS "============> Found CryptoHash!")
 endif(CryptoHash_FOUND )
 
 include_directories("../src")
