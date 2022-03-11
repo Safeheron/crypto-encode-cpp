@@ -44,6 +44,7 @@ install(
         DESTINATION include/safeheron
         FILES_MATCHING PATTERN "*.h"
         PATTERN "base64_imp.h" EXCLUDE
-        PATTERN "hex_conv.h" EXCLUDE
+        PATTERN "hex_imp.h" EXCLUDE
+        PATTERN "base58_imp.h" EXCLUDE
 
 )
