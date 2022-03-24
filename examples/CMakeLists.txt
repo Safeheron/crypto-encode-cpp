@@ -7,14 +7,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 
 find_package(CryptoEncode REQUIRED)
-if(CryptoEncode_FOUND )
-    MESSAGE(STATUS "============> Found CryptoEncode!")
-endif(CryptoEncode_FOUND )
-
 find_package(GTest REQUIRED)
-if(GTest_FOUND )
-    MESSAGE(STATUS "============> Found GTest!")
-endif(GTest_FOUND )
 
 add_executable(base58-test base58-test.cpp)
 target_include_directories(base58-test PUBLIC
