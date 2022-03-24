@@ -4,6 +4,10 @@
 
 Encoding library in C++ for hex, base58 and base64.
 
+# Prerequisites
+
+- [crypto-hash-cpp](https://github.com/safeheron/crypto-hash-cpp.git). See the [crypto-hash-cpp Installation Instructions](https://github.com/safeheron/crypto-hash-cpp/blob/main/README.md#build-and-install)
+ 
 # Build and Install
 
 Linux and Mac are supported now.  After obtaining the Source, have a look at the installation script.
