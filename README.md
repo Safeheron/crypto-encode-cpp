@@ -76,23 +76,23 @@ int main(){
 # Usage
 
 #### Namespace - safeheron::encode::hex
-- EncodeToHex(const std::string &data) - Encode the string into hex format.
-- EncodeToHex(const unsigned char * buf, size_t buf_len) - Encode the string into hex format.
-- DecodeFromHex(const std::string &hex) - Decode the string from hex format.
+>- EncodeToHex(const std::string &data) - Encode the string into hex format.
+>- EncodeToHex(const unsigned char * buf, size_t buf_len) - Encode the string into hex format.
+>- DecodeFromHex(const std::string &hex) - Decode the string from hex format.
  
 #### Namespace - safeheron::encode::base64
-- EncodeToBase64(const std::string &data, bool url = false) - Encode the string into base64/base64url format.
-- EncodeToBase64(const unsigned char * buf, size_t buf_len, bool url = false) - Encode the string into base64/base64url format.
-- DecodeFromBase64(const std::string &hex) - Decode the string from base64/base64url format.
+>- EncodeToBase64(const std::string &data, bool url = false) - Encode the string into base64/base64url format.
+>- EncodeToBase64(const unsigned char * buf, size_t buf_len, bool url = false) - Encode the string into base64/base64url format.
+>- DecodeFromBase64(const std::string &hex) - Decode the string from base64/base64url format.
 
 #### Namespace - safeheron::encode::base58
-- EncodeToBase58(const std::string &data) - Encode the string into base58 format.
-- EncodeToBase58(const unsigned char * buf, size_t buf_len) - Encode the string into base58 format.
-- DecodeFromBase58(const std::string &hex) - Decode the string from base58 format.
+>- EncodeToBase58(const std::string &data) - Encode the string into base58 format.
+>- EncodeToBase58(const unsigned char * buf, size_t buf_len) - Encode the string into base58 format.
+>- DecodeFromBase58(const std::string &hex) - Decode the string from base58 format.
 
-- EncodeToBase58Check(const std::string &data) - Encode the string into base58-check format.
-- EncodeToBase58Check(const unsigned char * buf, size_t buf_len) - Encode the string into base58-check format.
-- DecodeFromBase58Check(const std::string &hex) - Decode the string from base58-check format.
+>- EncodeToBase58Check(const std::string &data) - Encode the string into base58-check format.
+>- EncodeToBase58Check(const unsigned char * buf, size_t buf_len) - Encode the string into base58-check format.
+>- DecodeFromBase58Check(const std::string &hex) - Decode the string from base58-check format.
  
 # Some parts of the library come from external sources:
 - ReneNyffenegger/cpp-base64: [https://github.com/ReneNyffenegger/cpp-base64](https://github.com/ReneNyffenegger/cpp-base64)
