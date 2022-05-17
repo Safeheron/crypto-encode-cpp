@@ -17,4 +17,3 @@ if (NOT ${ENABLE_ASSEMBLE})
 
     target_link_libraries(${CMAKE_PROJECT_NAME} CryptoHash)
 endif()
-MESSAGE("Prepare Enable assemble2")
