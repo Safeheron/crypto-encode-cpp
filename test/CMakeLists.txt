@@ -1,5 +1,4 @@
 find_package(GTest REQUIRED)
-find_package(CryptoHash REQUIRED)
 
 include_directories(${GTEST_INCLUDE_DIRS})
 include_directories("../src")

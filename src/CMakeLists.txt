@@ -1,5 +1,3 @@
-find_package(CryptoHash REQUIRED)
-
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         crypto-encode/hex_imp.c
         crypto-encode/hex.cpp
@@ -10,12 +8,13 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         )
 
 
-target_link_libraries(${PROJECT_NAME} CryptoHash)
-
 # Refer to single internal library only if it's not assembled into a big library.
 option(ENABLE_ASSEMBLE "Enable assemble" OFF)
 if (NOT ${ENABLE_ASSEMBLE})
+    find_package(CryptoHash REQUIRED)
+
     target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${CryptoHash_INCLUDE_DIRS})
 
     target_link_libraries(${CMAKE_PROJECT_NAME} CryptoHash)
 endif()
+MESSAGE("Prepare Enable assemble2")
