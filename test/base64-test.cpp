@@ -1,6 +1,3 @@
-//
-// Created by 何剑虹 on 2020/10/22.
-//
 #include <cstring>
 #include "gtest/gtest.h"
 #include "../src/crypto-encode/base64.h"

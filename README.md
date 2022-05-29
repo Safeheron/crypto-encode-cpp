@@ -47,7 +47,11 @@ find_package(CryptoEncode REQUIRED)
 add_executable(${PROJECT_NAME} XXXX.cpp)
 target_include_directories(${PROJECT_NAME} PRIVATE
         ${CryptoEncode_INCLUDE_DIRS}
+        /usr/local/include  # This directory is included default on linux but not on Mac os
         )
+
+# This directory is included default on linux but not on Mac os
+target_link_directories(example PUBLIC /usr/local/lib)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         CryptoHash
@@ -57,19 +61,21 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 ## Example
 
 ```c++
-#include "../src/crypto-encode/base58.h"
+#include <iostream>
+#include "crypto-encode/base58.h"
 
-int main(){
-    std::string expected_data = "hello world";
-    std::string expected_b58 = "StV1DL6CwTryKyV";
-    
+using namespace safeheron::encode;
+
+int main(int argc, char **argv) {
+    const std::string expected_data("hello world");
+    const std::string expected_b58("3vQB7B6MrGQZaxCuFg4oh");
     //encode
-    std::string b58 = safeheron::encode::base58::EncodeToBase58(expected_data);
-    EXPECT_EQ(b58, expected_b58);
+    std::string b58 = base58::EncodeToBase58Check(expected_data);
+    std::cout << b58 << std::endl;
 
     // decode
-    std::string data = safeheron::encode::base58::DecodeFromBase58(b58);
-    EXPECT_EQ(data, expected_data);
+    std::string data = base58::DecodeFromBase58Check(b58);
+    std::cout << data << std::endl;
     return 0;
 }
 ```
@@ -102,5 +108,3 @@ int main(){
  
 # Development Process & Contact
 This library is maintained by Safeheron. Contributions are highly welcomed! Besides GitHub issues and PRs, feel free to reach out by mail or join Safeheron Telegram for discussions on code and research.
-
-# License
