@@ -2,6 +2,10 @@
 #include "gtest/gtest.h"
 #include "../src/crypto-encode/base58.h"
 
+#ifdef ENABLE_ASSEMBLE
+#include <google/protobuf/stubs/common.h>
+#endif
+
 using namespace safeheron::encode;
 
 void test_base58(const std::string &expected_data, const std::string &expected_b58){
@@ -43,5 +47,10 @@ TEST(Base58Check, ToBase58Check_FromBase58Check)
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     int ret = RUN_ALL_TESTS();
+
+#ifdef ENABLE_ASSEMBLE
+    google::protobuf::ShutdownProtobufLibrary();
+#endif
+
     return ret;
 }

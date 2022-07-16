@@ -4,6 +4,10 @@
 #include "../src/crypto-encode/hex.h"
 #include "../src/crypto-encode/hex_imp.h"
 
+#ifdef ENABLE_ASSEMBLE
+#include <google/protobuf/stubs/common.h>
+#endif
+
 using namespace safeheron::encode;
 
 void test(const char * pdata, int data_len, const char* pbase64, int base64_len){
@@ -48,5 +52,10 @@ TEST(Base64, ToUrlBase64_FromUrlBase64)
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     int ret = RUN_ALL_TESTS();
+
+#ifdef ENABLE_ASSEMBLE
+    google::protobuf::ShutdownProtobufLibrary();
+#endif
+
     return ret;
 }
