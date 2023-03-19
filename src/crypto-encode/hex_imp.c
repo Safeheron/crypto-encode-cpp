@@ -54,7 +54,8 @@ int tallymarker_hex2bin(const char *str, uint8_t *bytes, size_t blen) {
             };
 
     memset(bytes, 0, blen);
-    for (pos = 0; ((pos < (blen * 2)) && (pos < strlen(str))); pos += 2) {
+    size_t len = strlen(str);
+    for (pos = 0; ((pos < (blen * 2)) && (pos < len)); pos += 2) {
         idx0 = (uint8_t) str[pos + 0];
         idx1 = (uint8_t) str[pos + 1];
         bytes[pos / 2] = (uint8_t)(hashmap[idx0] << 4) | hashmap[idx1];
